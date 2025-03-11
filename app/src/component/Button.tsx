@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity as TouchableOpacityType, Text, StyleSheet, StyleProp, ViewStyle, TextStyle } from 'react-native';
+import { Text, StyleSheet, StyleProp, ViewStyle, TextStyle, TouchableOpacity } from 'react-native';
 
 interface CustomButtonProps {
   title: string;
@@ -17,7 +17,7 @@ const CustomButton = ({
   disabled = false 
 }: CustomButtonProps) => {
   return (
-    <TouchableOpacity   
+    <TouchableOpacity  
       style={[styles.button, disabled && styles.disabledButton, style]}
       onPress={onPress}
       disabled={disabled}
