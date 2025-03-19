@@ -1,29 +1,36 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
-import RobotCard from './component/robotCard'
+import { ScrollView, StyleSheet, View } from "react-native";
+import RobotCard from "./component/robotCard";
 
-
-const index = () => {
+const Index = () => {
   return (
-  <View style={styles.container}>
-      <RobotCard
-      imageSource={require('../../../../assets/images/robot.png')}
-      labelText="Unlock the Power Of  Future AI"
-      Text='Chat with the smartest AI Future Experience power of AI with us'
-      
-    />
     
-  </View>
-  )
-}
+    <ScrollView style={styles.contact}>
+      <View style={styles.container}>
+        <RobotCard
+          imageSource={require("../../../../assets/images/robot.png")}
+          labelText="Unlock the Power of Future AI"
+          Text="Chat with the smartest AI. Future Experience power of AI with us."
+        />
+        </View>
+        
+      
+    </ScrollView>
 
-export default index
+  );
+};
+
+export default Index;
 
 const styles = StyleSheet.create({
-  container:{
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+  container: {
+    padding :20,
+    alignItems: "center",
+    justifyContent: "center",
+   flexDirection :'row'
+    
+  },
+  contact: {
    
-   
-  }
-})
+    flexDirection:'row',
+      },
+});
